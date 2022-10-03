@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,700");
+
+:root {
+
+	--yellow: #ffba08;
+	--dark-yellow: #faa307;
+	--light-orange: #f48c06;
+	--dark-orange: #e85d04;
+	--red: #dc2f02;
+	--sienna: #030713;
+	--purple: #9d0208;
+	--dark-green: #6a040f;
+	--brown: #370617;
+}
+
+
+
 * {
 	box-sizing: border-box;
 	margin:0;
@@ -11,4 +27,223 @@ body {
 	font-family: "Raleway", sans-serif;
 	font-size: 1.2rem;
 	line-height: 1.45;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.sidebar {
+	background-color: #4f4f4f;
+	flex: 1 1 20%;
+	min-width: 275px;
+	padding: 2rem;
+}
+
+.logo {
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+	font-size: 2rem;
+}
+
+.logo span {
+	font-weight: bold;
+}
+
+.nav-icon {
+	display: none;
+}
+
+.nav-item {
+	color: #939393;
+	text-decoration: none;
+	margin-right: 2em;
+	font-size: 1.7rem;
+	display: inline-block;
+}
+
+.nav-item.active {
+	color: #c4c4c4;
+	font-weight: bold;
+}
+
+.main-content {
+	flex: 1 1 80%;
+	min-height: 100vh;
+	padding: 3rem;
+}
+
+.main-content h1 {
+	margin-bottom: 20px;
+}
+
+.portfolio {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-areas: 
+	'one two two two two'
+	'one three three four eight'
+	'one six five four eight'
+	'one six seven seven eight'
+	'nine nine nine nine eight';
+}
+
+.one {
+	background-color: var(--red);
+	grid-area: one;
+}
+
+.two {
+	background-color: var(--sienna);
+	grid-area: two;
+}
+
+.three {
+	background-color: var(--dark-orange);
+	grid-area: three;
+	color: black;
+}
+
+.four {
+	background-color: var(--dark-yellow);
+	grid-area: four;
+	color: black;
+}
+
+.five {
+	background-color: var(--dark-green);
+	grid-area: five;
+}
+
+.six {
+	background-color: var(--yellow);
+	grid-area: six;
+	color: black;
+}
+
+.seven {
+	background-color: var(--light-orange);
+	grid-area: seven;
+	color: black;
+}
+
+.eight {
+	background-color: var(--purple);
+	grid-area: eight;
+}
+
+.nine {
+	background-color: var(--brown);
+	grid-area: nine;
+}
+
+.box {
+	padding: 20px;
+	box-shadow: 5px 5px 30px rgba(219, 212, 212, 0.3);
+	font-size: 1.6rem;
+}
+
+footer {
+	background-color: #3e3e3e;
+	width: 100%;
+}
+
+.footer {
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	margin: auto;
+}
+
+.footer div span {
+	font-weight: bold;
+}
+
+
+
+@media(min-width: 1500px) {
+	.nav-item {
+		display: block;
+		margin: 7vh 0;
+	}
+
+}
+
+@media (max-width: 868px) {
+	.nav-item {
+		display: inline;
+		font-size: 1.2rem;
+		text-align: center;
+	}
+
+	.portfolio {
+		grid-template-areas:
+		'one two two'
+		'one three seven'
+		'six three seven'
+		'six nine nine'
+		'four four five'
+		'eight eight five';
+	}
+
+	.box {
+		font-size: 1.2rem;
+	}
+
+}
+
+@media (max-width: 500px) {
+
+	.portfolio {
+		display: block; 
+		height: auto;
+	}
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+		font-size: 2rem;
+	}
+
+	.box {
+		margin: 20px;
+	}
+
+	.logo {
+		margin: auto 0;
+	}
+
+	.nav-item {
+		display: block;
+		margin: 10px;
+	}
+
+	.nav-icon {
+		display: block;
+    cursor: pointer;
+	margin: auto 0;
+	font-size: 2rem;
+	}
+
+	.nav-icon #menu-open, 
+.nav-icon.active #menu-closed {
+    display: block;
+}
+
+.nav-icon.active #menu-open,
+.nav-icon #menu-closed {
+    display: none;
+}
+
+nav.active {
+    display: block;
+}
+
+nav {
+    display: none;
+}
+
+.footer {
+	width: 80%;
+}
+
 }

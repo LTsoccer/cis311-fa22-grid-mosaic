@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
     <title>Mosaic</title>
   </head>
   <body>
     <div class="sidebar">
-      <div class="logo">Awesome<span>Portfolio</span></div>
-      <nav>
+      <div class="flex">
+      <div class="logo">Awesome<span>Site</span></div>
+      <div class="nav-icon">
+        <i class="fa-solid fa-bars" id="menu-open"></i>
+        <i class="fa-solid fa-xmark fa-lg" id="menu-closed"></i>
+      </div>
+    </div>
+      <nav class="menu">
         <a href="" class="nav-item">Home</a>
         <a href="" class="nav-item">About</a>
         <a href="" class="nav-item active">Portfolio</a>
@@ -18,9 +25,28 @@
     </div>
 
     <div class="main-content">
+      <h1>Portfolio</h1>
       <div class="portfolio">
-        
+        <div class="one box">Serif are these thingies, so sans means without, so sans-serif means it doesn't have the thingies.</div>
+        <div class="two box">There's basically one main lesson here: DON'T USE COMIC SANS!</div>
+        <div class="three box">His hair is glorious (about Andrew Garfield)</div>
+        <div class="four box">I'm killing it today on the spelling.</div>
+        <div class="five box">Kenan Quotes of the Day</div>
+        <div class="six box">Code hard in these cubicles.</div>
+        <div class="seven box">I'm more concerned you don't have a soul.</div>
+        <div class="eight box">You've ascended, then descended, and now you're dead.</div>
+        <div class="nine box">I pronounce it as pound in my head but I try to pronounce it as hashtag out loud so y'all don't laugh at me.</div>
       </div>
     </div>
+
+    <footer>
+      <div class="footer">
+        <div>Awesome<span>Site</span>
+        </div>
+        <p>Copyright &copy; 2022</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>
